@@ -1,11 +1,11 @@
+apiVersion: cloudbuild.v1
+
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/project-180324-b-03/massive-ai-api:latest', '.']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', 'gcr.io/project-180324-b-03/massive-ai-api:latest']
-
-images: ['gcr.io/project-180324-b-03/massive-ai-api:latest']
 
 triggers:
   - kind: github
