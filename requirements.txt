@@ -1,0 +1,10 @@
+Flask
+Flask_Cors
+groq
+keras
+matplotlib
+numpy
+Pillow
+python-dotenv
+requests
+tensorflow
