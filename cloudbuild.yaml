@@ -1,7 +1,12 @@
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: 'bash'
-  args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
-timeout: '1600s'
-options:
-  logging: CLOUD_LOGGING_ONLY
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/project-180324-b-03/massive-ai-api:latest', '.']
+
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', 'gcr.io/project-180324-b-03/massive-ai-api:latest']
+
+images: ['gcr.io/project-180324-b-03/massive-ai-api:latest']
+
+triggers:
+  - kind: github
+    branches: ['main']
