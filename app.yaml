@@ -1,2 +1,3 @@
 runtime: python27
 service: massive-ai-api
+threadsafe: true
