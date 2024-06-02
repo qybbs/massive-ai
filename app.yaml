@@ -1,3 +1,6 @@
 runtime: python27
 service: massive-ai-api
 threadsafe: true
+handlers:
+  - url: /
+    script: app.py
