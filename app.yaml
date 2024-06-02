@@ -1,5 +1,3 @@
-runtime: python39
-
+runtime: python37
 env: flex  # Flexible environment for scaling
-
 service: massive-ai-api
