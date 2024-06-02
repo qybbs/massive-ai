@@ -1,3 +1,5 @@
 runtime: python311
+pip:
+  version: "24"
 # env: flex
 service: massive-ai-api
