@@ -1,6 +1,6 @@
 runtime: python311
 # env: flex
-service: massive-ai-
+service: massive-ai-api
 env_variables:
   API_GROQ: "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"
   API_IBM: "EGzV_A-LbpJlSHhYr8U5sCsd2qTwReK7EvIvKlgaCBYV"
